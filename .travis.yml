@@ -7,5 +7,5 @@ branches:
 cache:
   directories:
     - node_modules
-before_install:
+after_install:
   - npm run lint
