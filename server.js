@@ -25,4 +25,8 @@ const routes = require('./controllers/game_controller.js');
 app.use(routes);
 
 app.listen(PORT, () => console.log(`App now listening at localhost:${PORT}`));
+<<<<<<< HEAD
 
+=======
+//test
+>>>>>>> 49ff2608369a9cb98b9895046cb2b1681533fa21
