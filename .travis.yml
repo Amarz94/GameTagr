@@ -1,12 +1,11 @@
 language: node_js
-os: [
-  ""
-]
-sudo: false
-node_js:
-  - 12
-install:
-  - npm install
-script:
+node_js: "12"
+branches:
+  only:
+    - master
+    - main
+cache:
+  directories:
+    - node_modules
+after_install:
   - npm run lint
-  - npm test
