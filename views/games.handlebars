@@ -1,0 +1,26 @@
+<section id="games" class="container">
+    <h1>All Games</h1>
+
+    <!-- Loop through games that were passed in -->
+    {{#each games}}
+    <div class="game">
+        <h2>{{postTitle}}</h2>
+        <h3>{{gameTitle}}</h3>
+        <p>{{body}}</p>
+        <ul>
+            <li>{{author}}</li>
+            <li><a href="#" class="btn btn-reverse">Expand Post</a></li>
+        </ul>
+        <div class="rating">
+            <small>Rating: <span>{{rating}}</span></small>
+        </div>
+    </div>
+    <!-- If there are no games in the database -->
+    {{else}}
+    <p>No games available</p>
+    {{/each}}
+
+
+
+
+</section>
