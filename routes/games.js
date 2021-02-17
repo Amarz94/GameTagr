@@ -26,19 +26,19 @@ router.post("/add", (req, res) => {
   const data = {
     postTitle: "Do not buy Cyberpunk 2077 on console",
     gameTitle: "Cyberpunk 2077",
-    body: "This game is full of bugs...",
+    review: "This game is full of bugs...",
     author: "Bob",
     rating: "2",
   };
 
   // Destructering to pull info from data object
-  let { postTitle, gameTitle, body, author, rating } = data;
+  let { postTitle, gameTitle, review, author, rating } = data;
 
   // Insert into table
   Game.create({
     postTitle,
     gameTitle,
-    body,
+    review,
     author,
     rating,
   })

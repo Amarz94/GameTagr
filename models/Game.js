@@ -8,7 +8,7 @@ const Game = db.define("game", {
   gameTitle: {
     type: Sequelize.STRING,
   },
-  body: {
+  review: {
     type: Sequelize.STRING,
   },
   author: {
