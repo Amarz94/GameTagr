@@ -2,29 +2,36 @@
     <div class="form-wrap">
         <h1>Add A Game</h1>
         <p>Tag a game!</p>
-        <form>
+        {{#each errors}}
+        <div class="error">
+            <p>{{text}}</p>
+        </div>
+        {{/each}}
+        <form action="/games/add" method="POST">
             <div class="input-group">
-                <label for="post-title">Post Title</label>
-                <input type="text" name="title" id="title" class="input-box" placeholder="eg. Post Title"
-                    maxlength="100" required>
+                <label for="postTitle">Post Title</label>
+                <input type="text" name="postTitle" id="postTitle" class="input-box" placeholder="eg. Post Title"
+                    maxlength="100" value={{postTitle}}>
             </div>
             <div class="input-group">
-                <label for="game-title">Game Title</label>
-                <input type="text" name="game-title" id="game-title" class="input-box" placeholder="eg. Game Title"
-                    maxlength="100">
+                <label for="gameTitle">Game Title</label>
+                <input type="text" name="gameTitle" id="gameTitle" class="input-box" placeholder="eg. Game Title"
+                    maxlength="100" value={{gameTitle}}>
             </div>
             <div class="input-group">
-                <label for="body">Game Review</label>
-                <textarea name="body" id="body" class="input-box" placeholder="Review the game" rows="10"
-                    required></textarea>
+                <label for="review">Game Review</label>
+                <textarea name="review" id="review" class="input-box" placeholder="Review the game"
+                    rows="10">{{review}}</textarea>
             </div>
             <div class="input-group">
                 <label for="author">Author</label>
-                <input type="author" name="post_author" id="author" class="input-box" placeholder="Your Name" required>
+                <input type="author" name="author" id="author" class="input-box" placeholder="Your Name"
+                    value={{author}}>
             </div>
             <div class="input-group">
                 <label for="rating">Star Rating</label>
-                <input type="number" name="rating" id="rating" class="input-box" placeholder="How many stars?">
+                <input type="rating" name="rating" id="rating" class="input-box" placeholder="How many stars?"
+                    value={{rating}}>
             </div>
             <input type="submit" value="Tag Game" class="btn btn-reverse">
         </form>
