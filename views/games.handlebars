@@ -5,15 +5,6 @@
     {{#each games}}
     <div class="game">
         <h2>{{this.dataValues.postTitle}}</h2>
-        <h3>{{this.dataValues.gameTitle}}</h3>
-        <p>{{this.dataValues.review}}</p>
-        <ul>
-            <li>{{this.dataValues.author}}</li>
-            <li><a href="#" class="btn btn-reverse">Expand Post</a></li>
-        </ul>
-        <div class="rating">
-            <small>Rating: <span>{{this.dataValues.rating}}</span></small>
-        </div>
     </div>
     <!-- If there are no games in the database -->
     {{else}}
