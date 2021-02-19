@@ -7,6 +7,10 @@ const db = require("../config/connection");
 // Bring in model
 const Game = require("../models/Game");
 
+// Bring in sequelize to use like operation
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
+
 // Get game list (The "/" here is actually "/games")
 router.get("/", (req, res) =>
   Game.findAll()
@@ -66,6 +70,18 @@ router.post("/add", (req, res) => {
       .then((game) => res.redirect("/games"))
       .catch((err) => console.log(err));
   }
+});
+
+// Search for games
+router.get('/search', (req, res) => {
+  let { term } = req.query;
+
+  // Make Lowercase
+  term = term.toLowerCase();
+
+  Game.findAll({ where: { gameTitle: { [Op.like]: '%' + term + '%' } } })
+  .then(games => res.render('games', { games }))
+  .catch(err => console.log(err));
 });
 
 module.exports = router;

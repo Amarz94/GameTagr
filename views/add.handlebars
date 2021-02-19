@@ -1,3 +1,21 @@
+ <header class="inner">
+        <h2><a href="/">
+                GameTagr</a></h2>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/games">All Games</a>
+                </li>
+                <li>
+                    <a href="/games/add">Add Game</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
 <section id="add" class="container">
     <div class="form-wrap">
         <h1>Add A Game</h1>
@@ -28,22 +46,10 @@
                 <input type="author" name="author" id="author" class="input-box" placeholder="Your Name"
                     value={{author}}>
             </div>
+            <h2>{{rating}}</h2>
             <div class="input-group">
                 <label for="rating">Star Rating</label>
-                <input type="rating" name="rating" id="rating" class="input-box" placeholder="How many stars?"
-                    value={{rating}}>
-                    <div class="rate">
-                        <input type="radio" class="starRate" id="star5" name="rate" value="5" />
-                        <label for="star5" title="text">5 stars</label>
-                        <input type="radio" class="starRate" id="star4" name="rate" value="4" />
-                        <label for="star4" title="text">4 stars</label>
-                        <input type="radio" class="starRate" id="star3" name="rate" value="3" />
-                        <label for="star3" title="text">3 stars</label>
-                        <input type="radio" class="starRate" id="star2" name="rate" value="2" />
-                        <label for="star2" title="text">2 stars</label>
-                        <input type="radio" class="starRate" id="star1" name="rate" value="1" />
-                        <label for="star1" title="text">1 star</label>
-                    </div>
+                <input type="number" name="rating" id="rating" class="input-box" placeholder="How many stars?" value={{ rating }}>
             </div>
             <input type="submit" value="Tag Game" class="btn btn-reverse">
         </form>
