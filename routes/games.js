@@ -23,28 +23,49 @@ router.get("/add", (req, res) => res.render("add"));
 
 // Add a game
 router.post("/add", (req, res) => {
-  const data = {
-    postTitle: "Do not buy Cyberpunk 2077 on console",
-    gameTitle: "Cyberpunk 2077",
-    review: "This game is full of bugs...",
-    author: "Bob",
-    rating: "2",
-  };
-
   // Destructering to pull info from data object
-  let { postTitle, gameTitle, review, author, rating } = data;
+  let { postTitle, gameTitle, review, author, rating } = req.body;
+  let errors = [];
 
-  // Insert into table
-  Game.create({
-    postTitle,
-    gameTitle,
-    review,
-    author,
-    rating,
-  })
-    // Redirects us back to /games
-    .then((game) => res.redirect("/games"))
-    .catch((err) => console.log(err));
+  if (!postTitle) {
+    errors.push({ text: "Please add a post title" });
+  }
+  if (!gameTitle) {
+    errors.push({ text: "Please add a game title" });
+  }
+  if (!review) {
+    errors.push({ text: "Please add a review" });
+  }
+  if (!author) {
+    errors.push({ text: "Please add your name" });
+  }
+  if (!rating) {
+    errors.push({ text: "Please rate this game" });
+  }
+
+  // Check for errors
+  if (errors.length > 0) {
+    res.render("add", {
+      errors,
+      postTitle,
+      gameTitle,
+      review,
+      author,
+      rating,
+    });
+  } else {
+    // Insert into table
+    Game.create({
+      postTitle,
+      gameTitle,
+      review,
+      author,
+      rating,
+    })
+      // Redirects us back to /games
+      .then((game) => res.redirect("/games"))
+      .catch((err) => console.log(err));
+  }
 });
 
 module.exports = router;

@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Set static folder
 app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/", (req, res) => res.send("INDEX"));
+app.get('/', (req, res) => res.render('index', { layout: 'landing' }));
 
 // Game routes
 app.use("/games", require("./routes/games"));
