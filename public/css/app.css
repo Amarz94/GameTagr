@@ -1,0 +1,87 @@
+body {
+    font-weight: normal;
+}
+
+textarea {
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+}
+
+label {
+    color: white;
+    font-weight: normal;
+}
+
+.button, a.button, button, [type=submit], [type=reset], [type=button] {
+    font-weight: normal;
+}
+
+[type='color'], [type='date'], [type='datetime-local'], [type='datetime'], [type='email'], [type='month'], [type='number'], [type='password'], [type='search'], [type='tel'], [type='text'], [type='time'], [type='url'], [type='week'], select, textarea {
+    background: rgba(65, 65, 65, 0.95);
+    border: 1px solid rgba(80, 80, 80, 0.95) !important;
+    box-shadow: 0;
+}
+
+@media screen and (min-width: 1080px) {
+    header {
+      margin: 0;
+      padding: 60px 0 100px;
+    }
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+}
+
+#submitGame {
+  clear: both;
+}
+
+ul {
+    text-align: center;
+    list-style-position: inside;
+}
+
+
+.rate {
+    float: left;
+    width: 100%;
+    margin:auto;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    position: relative;
+    left: -33.33%;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+/* Modified from: https://github.com/mukulkant/Star-rating-using-pure-css */
