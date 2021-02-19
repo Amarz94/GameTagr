@@ -1,0 +1,46 @@
+header {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 6rem;
+  }
+  
+  header nav ul {
+    display: flex;
+  }
+  
+  header nav li {
+    margin: 0 1rem;
+  }
+  
+  /* Login Button Spacing */
+  /*header nav li:last-child {
+    margin-left: -5px;
+  }*/
+  
+  header.inner {
+    background: var(--bg-color);
+    border-bottom: 4px solid var(--primary-color);
+    position: relative;
+    box-shadow: var(--box-shadow);
+  }
+
+  .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 75px;
+  }
+
+  .hero {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(/image/homebackground.jpg);
+  }
