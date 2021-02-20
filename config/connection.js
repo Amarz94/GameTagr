@@ -1,6 +1,24 @@
 // Sequelize instance to connect to the database
 const Sequelize = require("sequelize");
-module.exports = new Sequelize("game_db", "root", process.env.MY_PASSWORD, {
-  host: "localhost",
+const connection = {
+  username: "root",
+  password: process.env.MY_PASSWORD,
+  database: "game_db",
+  host: "127.0.0.1",
   dialect: "mysql",
-});
+};
+module.exports = new Sequelize(process.env.JAWSDB_URL || connection) 
+
+// var mysql = require('mysql');
+// var connection;
+
+// if (process.env.JAWSDB_URL) {
+//   connection = mysql.createConnection(process.env.JAWSDB_URL);
+// } else {
+//   connection = mysql.createConnection({
+//       host: "localhost",
+//       user: "root",
+//       password: process.env.MY_PASSWORD,
+//       database: "game_db"
+//   });
+// };
