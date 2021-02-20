@@ -1,9 +1,16 @@
 const trashcan = $("a.delete");
 console.log(trashcan);
 
+const localconnection = "http://localhost:3000"
+const herokuconnection = "https://gametagr.herokuapp.com"
+
 
 trashcan.on("click", function(event){
-    const endpoint = `http://localhost:3000/games/${this.dataset.doc}`;
+    let endpoint = ""; if (process.env.JAWSDB_URL) {
+        endpoint = `${herokuconnection}/games/${this.dataset.doc}`
+    } else {
+        endpoint = `${localconnection}/games/${this.dataset.doc}`
+    }
 
     $.ajax(endpoint, {
         method: "DELETE"
