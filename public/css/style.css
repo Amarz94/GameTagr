@@ -1,12 +1,12 @@
 header {
     display: flex;
-    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 85%;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 6rem;
+    margin: 0 auto;
   }
   
   header nav ul {
@@ -33,7 +33,6 @@ header {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
     margin-top: 75px;
   }
 
