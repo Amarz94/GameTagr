@@ -8,17 +8,3 @@ const connection = {
   dialect: "mysql",
 };
 module.exports = new Sequelize(process.env.JAWSDB_URL || connection) 
-
-// var mysql = require('mysql');
-// var connection;
-
-// if (process.env.JAWSDB_URL) {
-//   connection = mysql.createConnection(process.env.JAWSDB_URL);
-// } else {
-//   connection = mysql.createConnection({
-//       host: "localhost",
-//       user: "root",
-//       password: process.env.MY_PASSWORD,
-//       database: "game_db"
-//   });
-// };
