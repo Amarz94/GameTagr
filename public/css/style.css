@@ -51,6 +51,15 @@ header {
 /* mouse over link */
 .link:hover {
   color: #ff2155;
-  text-decoration: none;
+  text-decoration: ;
 }
 
+.details-box {
+  background-color: rgba(0, 0, 0, 0.521);
+  padding: 10px;
+  
+}
+
+.review-format {
+  
+}

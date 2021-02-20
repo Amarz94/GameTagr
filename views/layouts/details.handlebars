@@ -15,11 +15,11 @@
             </ul>
         </nav>
     </header>
-<div class="game">
+<div class="game container small-container medium-container details-box">
     <h1>{{games.dataValues.postTitle}}</h1>
-    <p class="">{{games.dataValues.gameTitle}}</h3>
-    <h2>{{games.dataValues.author}}</h2>
-    <p>{{games.dataValues.review}}</p>
+    <p class="post">Game: {{games.dataValues.gameTitle}}</h3>
+    <p class="post">By: {{games.dataValues.author}}</h2>
+    <p class="post review-format">{{games.dataValues.review}}</p>
 
     <div class="rating">
         <small>Rating: <span>{{games.dataValues.rating}}</span></small>
