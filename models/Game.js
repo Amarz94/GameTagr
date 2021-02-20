@@ -20,7 +20,7 @@ const Game = db.define("game", {
 });
 
 // Syncs with Database (force: true will drop the table if it already exists)
-Game.sync({ force: true });
+Game.sync({ force: false });
 
 // Makes the Game Model available for other files (will also create a table)
 module.exports = Game;
