@@ -22,7 +22,7 @@
     <!-- Loop through games that were passed in -->
     {{#each games}}
     <div class="game">
-        <h2>{{this.dataValues.postTitle}}</h2>
+        <a class= "link" href="/games/{{this.dataValues.id}}"><h2>{{this.dataValues.postTitle}}</h2></a>
     </div>
     <!-- If there are no games in the database -->
     {{else}}

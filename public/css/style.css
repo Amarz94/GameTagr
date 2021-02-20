@@ -44,3 +44,14 @@ header {
     background-position: center;
     background-image: url(/image/homebackground.jpg);
   }
+/*Links to details*/
+.link {
+    text-decoration: none;
+}
+
+/* mouse over link */
+.link:hover {
+  color: #ff2155;
+  text-decoration: none;
+}
+

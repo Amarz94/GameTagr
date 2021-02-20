@@ -1,12 +1,28 @@
- <div class="game">
-        <h2>{{this.dataValues.postTitle}}</h2>
-        <h3>{{this.dataValues.gameTitle}}</h3>
-        <p>{{this.dataValues.review}}</p>
-        <ul>
-            <li>{{this.dataValues.author}}</li>
-            <li><a href="#" class="btn btn-reverse">Expand Post</a></li>
-        </ul>
-        <div class="rating">
-            <small>Rating: <span>{{this.dataValues.rating}}</span></small>
-        </div>
+ <header class="inner">
+        <h2><a href="/">
+                GameTagr</a></h2>
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/games">All Games</a>
+                </li>
+                <li>
+                    <a href="/games/add">Add Game</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+<div class="game">
+    <h1>{{games.dataValues.postTitle}}</h1>
+    <p class="">{{games.dataValues.gameTitle}}</h3>
+    <h2>{{games.dataValues.author}}</h2>
+    <p>{{games.dataValues.review}}</p>
+
+    <div class="rating">
+        <small>Rating: <span>{{games.dataValues.rating}}</span></small>
+    </div>
+        <a class="delete" data-doc="{{games.dataValues.id}}"><i class="fas fa-trash-alt"></i></a> 
     </div>
