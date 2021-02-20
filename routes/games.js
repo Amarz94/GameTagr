@@ -84,4 +84,22 @@ router.get('/search', (req, res) => {
   .catch(err => console.log(err));
 });
 
+//Show details for each review
+router.get("/:id", (req, res) => {
+  const id = req.params.id;
+  Game.findOne({ where: { id: id } })
+  .then(games => res.render("layouts/details", { games }))
+  .catch(err => console.log(err));
+});
+
+//Delete review
+router.delete("/:id", (req, res) => {
+  const id = req.params.id;
+  Game.destroy({ where: {id: id} })
+  .then(result => {
+    res.json({redirect: ("/games")});
+  }) 
+  .catch(err => console.log(err));
+});
+
 module.exports = router;
