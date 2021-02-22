@@ -51,7 +51,6 @@ header {
 /* mouse over link */
 .link:hover {
   color: #ff2155;
-  text-decoration: ;
 }
 
 .details-box {
@@ -62,6 +61,8 @@ header {
 
 .yellow {
   color: #fcb42a;
+}
 
-
+#review {
+  color: white;
 }
