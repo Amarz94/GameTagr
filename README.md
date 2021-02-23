@@ -21,7 +21,7 @@ Our project is intended to be used by gamers of all ages to provide REAL reviews
 
 [Live URL](https://gametagr.herokuapp.com/)
 
-![Website GIF]()
+![Website GIF](./public/image/GameTagr.gif)
 
 ## License
 
@@ -34,7 +34,10 @@ Our project is intended to be used by gamers of all ages to provide REAL reviews
 ![sample](https://img.shields.io/github/followers/3?style=social)
 
 ## Contributing
-* Alexander Marzullo, Cris Franco, Julie Ann Iwinski, and Ryan Curtin 
+* Alexander Marzullo
+* Cris Franco
+* Julie Ann Iwinski
+* Ryan Curtin 
 
 ### Covenant Code of Conduct
 
