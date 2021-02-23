@@ -21,7 +21,7 @@ Our project is intended to be used by gamers of all ages to provide REAL reviews
 
 [Live URL](https://gametagr.herokuapp.com/)
 
-![Website GIF]()
+![Website GIF](./public/image/GameTagr.gif)
 
 ## License
 
