@@ -7,6 +7,5 @@ trashcan.on("click", function (event) {
     method: "DELETE",
   }).done((response) => (window.location.href = response.redirect));
 
-  // .then((data) => console.log(data))
-  // .catch(err => console.log(err)));
 });
+
